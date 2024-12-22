@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="/static/css/download.css">
+  
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Olá, <span id="username">{{ username }}</span>!</h1>
+        </header>
+        <main class="main-content">
+            <img id="game-logo" src="/static/images/horror.png" alt="Logo do Jogo">
+            <h2>Bem-vindo ao <span class="game-title">Horror Bento</span></h2>
+            <p class="game-description">
+                O projeto visa o desenvolvimento de um jogo de terror imersivo, ambientado em uma escola, onde o jogador deve apanhar livros espalhados pelo mapa enquanto enfrenta uma entidade ameaçadora. O jogo utiliza mecânicas de terror, como jumpscares e inteligência artificial da entidade, além de contar com um site para distribuição do jogo e autenticação dos usuários.
+            </p>
+            <button class="download-button">DOWNLOAD</button>
+            <div class="links-section">
+                <a href="https://docs.google.com/document/d/1lGU_tbNVXAHRqKyOayqyVfx2ghZUMkpstmxVXWvfoQY/edit?tab=t.0#heading=h.apvzxdlntyd6" class="link-button" target="_blank">Manual do Jogo</a>
+                <a href="https://docs.google.com/document/d/1XPcNLQlH_RIAtbCyLhvsmKAqND_HSt15sayJLaMMQx0/edit?tab=t.0#heading=h.6dl6j8r6wqy" class="link-button" target="_blank">Documentação Técnica</a>
+            </div>
+            <!-- Novo botão para o simulador de Blueprints -->
+            <div class="simulator-section">
+                <p></p>
+                <a href="{{ url_for('blueprints') }}" class="link-button simulator-button">Simulador de Blueprints</a>
+            </div>
+            
+        </main>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a), url('https://www.transparenttextures.com/patterns/diagmonds.png');
+    background-size: cover;
+    color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(26, 26, 26, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1.5s ease, popIn 0.5s ease;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Cabeçalhos */
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #eaeaea;
+    text-shadow: 0 0 8px rgba(213, 25, 54, 0.3);
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #222;
+    color: #eaeaea;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+form input:focus {
+    border-color: #d51936;
+}
+
+/* Botão de envio do formulário */
+form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #111, #1a1a1a);
+    border: 1px solid #d51936;
+    border-radius: 5px;
+    color: #eaeaea;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #d51936, #e0243c);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(213, 25, 54, 0.6);
+}
+
+/* Rodapé do formulário */
+.form-footer {
+    margin-top: 10px;
+}
+
+.form-footer a {
+    color: #d51936;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+    color: #e0243c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+}

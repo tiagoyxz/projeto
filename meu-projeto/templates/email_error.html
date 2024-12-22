@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro no Envio do E-mail</title>
+    <link rel="stylesheet" href="/static/css/email_error.css">
+</head>
+<style>
+    /* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Principal */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(26, 26, 26, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1.5s ease;
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #e0243c;
+}
+
+/* Texto explicativo */
+p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #eaeaea;
+}
+
+/* Botão de Voltar */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #e0243c, #d51936);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #d51936, #e0243c);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(213, 25, 54, 0.6);
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Erro ao Enviar E-mail</h1>
+            <p>Infelizmente, ocorreu um erro ao tentar enviar o e-mail da recuperação da senha. Por favor, tente novamente mais tarde.</p>
+            <a href="/forgot-password" class="back-btn">Voltar para a Recuperação da Senha</a>
+        </div>
+    </div>
+</body>
+</html>

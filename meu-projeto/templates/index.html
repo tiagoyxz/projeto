@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login e Registro</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+        <img src="/static/images/horror.png" alt="Logo Horror Bento" id="main-logo">
+        
+        <div class="toggle-buttons">
+            <button id="login-toggle" onclick="toggleForm('login')">Login</button>
+            <button id="register-toggle" onclick="toggleForm('register')">Registro</button>
+        </div>
+
+        <!-- Formulário de Login -->
+        <form id="login-form" class="form-section visible" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit" name="login">Entrar</button>
+            <div class="form-footer">
+                <a href="{{ url_for('forgot_password') }}">Esqueceu a Senha?</a>
+            </div>  
+        </form>
+        
+        <!-- Formulário de Registro -->
+        <form id="register-form" class="form-section hidden" method="POST">
+            <input type="text" name="name" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit" name="register">Criar Conta</button>
+            <div class="form-footer">
+                <a href="{{ url_for('forgot_password') }}">Esqueceu a Senha?</a>
+            </div>            
+        </form>
+
+        <div class="support-button-container">
+            <a href="{{ url_for('suporte') }}" class="support-button">Suporte</a>
+        </div>
+        
+        
+
+    </div>
+</div>
+
+<script src="/static/js/index.js"></script>
+</body>
+</html>
